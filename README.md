@@ -15,4 +15,3 @@ This project is a visualization of a hashtable that implements CRUD (Create, Rea
 3. **MVC Architecture**: Follows the Model-View-Controller design pattern.
 4. **Canvas Drawing**: Utilizes Canvas drawing classes for graphical representation.
 
-![readme](https://github.com/TayssirGh/Hashtable-Visualization/assets/126917969/2fa4cca9-91ae-4f0e-9d72-2142f674f91c)
