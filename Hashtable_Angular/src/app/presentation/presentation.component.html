@@ -1,0 +1,50 @@
+
+<div class="card p-2 pb-3 mb-2">
+  <p-menubar [model]="items" >
+
+  </p-menubar>
+</div>
+<div>
+  <p-dialog header="Enter the size" [(visible)]="visibleCreate" [modal]="true" [style]="{ width: '20vw' }" [draggable]="false" [resizable]="false" >
+    <div class="flex justify-content-between">
+      <input type="text" pInputText [(ngModel)]="value" />
+      <p-button label="OK" (click)="create()"></p-button>
+
+    </div>
+  </p-dialog>
+</div>
+<div>
+  <p-dialog header="Enter the name" [(visible)]="visibleAdd" [modal]="true" [style]="{ width: '20vw' }" [draggable]="false" [resizable]="false" >
+    <div class="flex justify-content-between">
+      <input type="text" pInputText [(ngModel)]="name" />
+      <p-button label="OK" (click)="add()"></p-button>
+
+    </div>
+  </p-dialog>
+</div>
+<div>
+  <p-dialog header="Alert" [(visible)]="visibleSizeAlert" [modal]="true" [style]="{ width: '20vw' }" [draggable]="false" [resizable]="false" >
+    <div class="flex justify-content-between">
+    <p class="text-2xl">Please enter a valid size ! </p>
+    </div>
+  </p-dialog>
+</div>
+<div>
+  <p-dialog [(visible)]="visibleNameAlert" [modal]="true" [style]="{ width: '20vw' }" [draggable]="false" [resizable]="false" >
+    <div class="flex flex-column justify-content-between">
+      <p class="text-2xl">Please enter the size first ! </p>
+      <p-button class="flex justify-content-end" label="OK" (click)="close()"></p-button>
+    </div>
+  </p-dialog>
+</div>
+<p-dialog header="remove" [(visible)]="visibleRemove" [modal]="true" [closable]="false" >
+  <p>Are you sure you want to delete <span class="xl:font-bold">{{ removedValue }}</span>  ?</p>
+  <div class="flex justify-content-between mt-2 pt-2">
+    <button type="button" pButton icon="pi pi-check" label="Yes" (click)="remove()" class="mr-2"></button>
+    <button type="button" pButton icon="pi pi-times" label="No" (click)="close()" class="mr-2"></button>
+  </div>
+</p-dialog>
+
+
+<div #container  class="flex"></div>
+
